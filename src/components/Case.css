@@ -1,0 +1,203 @@
+.case {
+    display: grid;
+    padding: 6rem 0 2rem;
+}
+
+.section-title {
+    font-size: 4.5rem;
+    text-align: center;
+    background: linear-gradient(rgb(115, 115, 115), rgb(179, 179, 179));
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    margin-bottom: 2.5rem;
+}
+.case-container {
+    display: grid;
+    grid-template-columns: max-content 250px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+}
+.case-img {
+    width: 300px;
+}
+.discount-section {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 6rem 0 2rem;
+
+}
+.discount-container {
+    display: grid;
+    grid-template-columns: max-content 250px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem;
+    background-color: rgb(245, 235, 239);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-right: 24px;
+    margin-left: 24px;
+    
+    border-radius: 10px;
+    width:  924px;
+    height: 290px;
+
+}
+.discount-img {
+    width: 300px;
+}
+.discount-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .75rem;
+    display: inline-block;
+    /* background-color: rgb(0, 0, 0); */
+    background-color: whitesmoke;
+    /* color: rgb(255, 255, 255); */
+    color: rgb(0, 0, 0);
+    padding: 1rem 1.25rem;
+    border-radius: .5rem;
+    transition: .3s;
+}
+.dark-mode .button--flex {
+    background-color: black;
+    color: white;
+}
+.dark-mode .discount-container{
+    background-color: #444; /* Dark mode background */
+    color: white; /* Text color for dark mode */
+}
+
+.discount-container.dark-mode {
+    background-color: #333; /* Set background for container */
+}
+
+.button--flex.dark-mode {
+    background-color: #555; /* Button background for dark mode */
+    color: white; /* Button text color for dark mode */
+}
+
+/* Case.css */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Initial position */
+    transition: opacity 1s ease-out, transform 0.5s ease-out; /* Smooth transition */
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(-50px); /* Initial slide from left */
+    transition: opacity 0.8s ease-out, transform 2s ease-out;
+  }
+  
+  .slide-in-right.show {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+  
+  .slide-in-up {
+    opacity: 0;
+    transform: translateY(50px); /* Slide up */
+    transition: opacity 0.8s ease-out, transform 2s ease-out;
+  }
+  
+  .slide-in-up.show {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+
+/* For mobile devices */
+@media screen and (max-width: 600px) {
+    .case {
+        display: block; /* Stack elements vertically */
+        padding: 2rem 1rem; /* Reduce padding for mobile */
+    }
+
+    .section-title {
+        font-size: 2.5rem; /* Reduce font size */
+        margin-bottom: 1.5rem;
+    }
+
+    .case-container {
+        display: block; /* Stack image and text */
+        text-align: center;
+        padding: 1rem;
+        grid-template-columns: 1fr; /* Full-width for mobile */
+        gap: 1rem; /* Reduce gap */
+    }
+
+    .case-img {
+        width: 100%; /* Make image responsive */
+        max-width: 200px;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .case-data {
+        padding: 0.5rem;
+    }
+
+    .discount-section {
+        margin-top: 2rem; /* Reduce margin for mobile */
+        padding: 2rem 0;
+    }
+
+    .discount-container {
+        display: block; /* Stack elements vertically */
+        text-align: center;
+        padding: 2rem;
+        width: auto; /* Full-width for mobile */
+        height: auto;
+        grid-template-columns: 1fr;
+        column-gap: 1rem;
+    }
+
+    .discount-title {
+        font-size: 1.25rem; /* Reduce title size */
+        margin-bottom: 1rem;
+    }
+
+    .discount-img {
+        width: 100%; /* Make image responsive */
+        max-width: 200px; /* Limit the width on mobile */
+        margin: 0 auto; /* Center image */
+    }
+
+    .button--flex {
+        padding: 0.75rem 1rem; /* Adjust padding for buttons */
+        font-size: 1rem; /* Reduce font size */
+    }
+
+    /* Adjust dark mode styles */
+    .dark-mode .discount-container {
+        background-color: #333;
+        color: white;
+    }
+
+    .dark-mode .button--flex {
+        background-color: #555;
+        color: white;
+    }
+    
+    .slide-in-right, .fade-in, .slide-in-up {
+        opacity: 1; /* Ensure animations don't reset on small screens */
+        transform: none; /* Remove transforms on mobile */
+    }
+}
+
+  
